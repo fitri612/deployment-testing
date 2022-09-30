@@ -7,18 +7,14 @@ test("Renders semua home", () => {
   const title = screen.getByText(/why do we need test ?/i);
   expect(title).toBeInTheDocument();
 
+  const title2 = screen.getByText(
+    /To guarentee the quality. And to make sure the code is working as expected./i
+  );
+  expect(title2).toBeInTheDocument();
+
   // mencari button tertentu
   // pastikan button kita memiliki role="button"
   const button = screen.getByRole("button");
   expect(button).toBeInTheDocument();
   expect(button).toHaveTextContent("Click Me");
-
-  // klik tombol users list
-  fireEvent.click(button);
-  // mencari tombol tertentu
-  // pada halaman yang muncul karena klik tombol
-  // pastikan button kita memiliki role="button"
-  const button2 = screen.getByRole("button");
-  expect(button2).toBeInTheDocument();
-  expect(button2).toHaveTextContent("Click Me");
 });

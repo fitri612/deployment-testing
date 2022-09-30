@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function UserPage() {
+export default function CommentPage() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
